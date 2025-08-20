@@ -1,0 +1,13 @@
+// 3. Find Maximum Value (with Nullable)
+// Assignment: Add types for arrays and handle the nullable return value.
+
+function findMax(arr:number[]):number | null |undefined {
+  if (arr.length === 0) {
+    return null;
+  }
+  return arr.reduce((max, num) => (num > max ? num : max), arr[0]);
+}
+const numbers:number[] = [1, 2, 3, 4, 5];
+console.log(findMax(numbers));
+const empty:number[]=[];
+console.log(findMax(empty)); 
